@@ -1,5 +1,3 @@
-import React from 'react';
-
 const BrandStory = () => {
     return (
         <section className="py-20 px-4 bg-[var(--color-cream)]">
