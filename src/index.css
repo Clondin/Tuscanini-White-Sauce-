@@ -1,0 +1,32 @@
+:root {
+  --color-gold: #C5A059;
+  --color-blue: #003366;
+  --color-cream: #F9F7F2;
+  --color-red: #D14836;
+  
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Montserrat', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-cream);
+  color: var(--color-blue);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
