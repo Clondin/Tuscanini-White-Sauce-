@@ -15,7 +15,7 @@ const Heritage = () => {
                         <img
                             alt="Tuscanini Alfredo Sauce Jar"
                             className="editorial-shadow w-full aspect-[4/5] object-contain bg-white p-8 transition-transform duration-700 group-hover:scale-[1.02]"
-                            src="/assets/product-alfredo.png"
+                            src="/assets/hero-product-alfredo.png"
                         />
                         <div className="absolute bottom-6 -right-6 bg-surface p-8 editorial-shadow max-w-[200px] border-t-4 border-tuscan-red">
                             <p className="font-headline text-2xl text-tuscan-red leading-tight italic">Est. 1910</p>
