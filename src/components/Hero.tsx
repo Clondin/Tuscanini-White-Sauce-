@@ -4,11 +4,17 @@ const Hero = () => {
     return (
         <section className="relative min-h-screen flex items-center pt-24 sm:pt-28 md:pt-36 overflow-hidden">
             <div className="absolute inset-0 z-0">
-                <img
-                    alt="Tuscanini Authentic Italian Alfredo"
-                    className="w-full h-full object-cover"
-                    src="/assets/hero-alfredo.png"
-                />
+                <picture>
+                    <source
+                        media="(min-width: 768px)"
+                        srcSet="/assets/hero-alfredo.png"
+                    />
+                    <img
+                        alt="Tuscanini Authentic Italian Alfredo"
+                        className="w-full h-full object-cover"
+                        src="https://github.com/user-attachments/assets/f89e9aec-59d4-4545-90ce-bada816fe438"
+                    />
+                </picture>
                 <div className="absolute inset-0 bg-gradient-to-b from-surface/60 via-transparent to-transparent md:bg-gradient-to-r md:from-surface/70 md:via-surface/30 md:to-transparent" />
             </div>
 
