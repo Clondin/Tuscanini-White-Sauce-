@@ -37,15 +37,14 @@ const ProductShowcase = () => {
             </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 relative z-10">
-                {/* Desktop header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="hidden md:block text-center mb-20"
+                    className="text-center mb-10 md:mb-20"
                 >
                     <span className="text-tuscan-red font-label text-xs uppercase tracking-[0.2em] mb-4 block">The Collection</span>
-                    <h2 className="font-headline text-5xl lg:text-6xl font-bold text-primary mb-4">Our Masterpieces</h2>
+                    <h2 className="font-headline text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-primary mb-4">Our Masterpieces</h2>
                     <div className="flex h-1 w-24 mx-auto overflow-hidden">
                         <div className="w-1/3 bg-tuscan-green" />
                         <div className="w-1/3 bg-white border-y border-gray-200" />
@@ -53,34 +52,22 @@ const ProductShowcase = () => {
                     </div>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-12">
-                    {products.map((product, index) => (
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                    {products.map((product) => (
                         <motion.div
                             key={product.id}
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: product.delay, duration: 0.6 }}
-                            className="flex flex-col items-center group relative"
+                            className="flex flex-col items-center group"
                         >
-                            {/* Mobile overlay heading on first product */}
-                            {index === 0 && (
-                                <div className="md:hidden absolute top-4 left-0 right-0 z-20 text-center">
-                                    <span className="text-tuscan-red font-label text-xs uppercase tracking-[0.2em] mb-2 block">The Collection</span>
-                                    <h2 className="font-headline text-3xl sm:text-4xl font-bold text-primary mb-2">Our Masterpieces</h2>
-                                    <div className="flex h-1 w-24 mx-auto overflow-hidden">
-                                        <div className="w-1/3 bg-tuscan-green" />
-                                        <div className="w-1/3 bg-white border-y border-gray-200" />
-                                        <div className="w-1/3 bg-tuscan-red" />
-                                    </div>
-                                </div>
-                            )}
-                            <div className="relative h-80 sm:h-96 md:h-80 w-full flex items-center justify-center mb-4 md:mb-8">
-                                <div className="absolute w-52 h-52 sm:w-64 sm:h-64 md:w-56 md:h-56 rounded-full bg-surface-container-high shadow-lg transition-transform duration-500 group-hover:scale-110" />
+                            <div className="relative h-52 sm:h-64 md:h-80 w-full flex items-center justify-center mb-8">
+                                <div className="absolute w-36 h-36 sm:w-44 sm:h-44 md:w-56 md:h-56 rounded-full bg-surface-container-high shadow-lg transition-transform duration-500 group-hover:scale-110" />
                                 <motion.img
                                     src={product.image}
                                     alt={product.name}
-                                    className="relative h-72 sm:h-88 md:h-72 object-contain drop-shadow-2xl z-10"
+                                    className="relative h-48 sm:h-60 md:h-72 object-contain drop-shadow-2xl z-10"
                                     animate={{ y: [0, -12, 0] }}
                                     transition={{
                                         duration: 5,
@@ -90,7 +77,7 @@ const ProductShowcase = () => {
                                     }}
                                 />
                             </div>
-                            <div className="text-center mb-8 md:mb-0">
+                            <div className="text-center">
                                 <h3 className="text-2xl font-headline font-bold text-primary mb-2 group-hover:text-tuscan-red transition-colors">
                                     {product.name}
                                 </h3>
