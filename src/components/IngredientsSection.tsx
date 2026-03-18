@@ -18,36 +18,51 @@ const IngredientsSection = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
                     <motion.div
-                        initial={{ opacity: 0, y: 30 }}
+                        initial={{ opacity: 0, y: 60 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
                         className="relative overflow-hidden min-h-[250px] sm:min-h-[300px] md:min-h-[400px]"
                     >
-                        <img
+                        <motion.img
                             src="/assets/parmesan-cheese.png"
                             alt="Parmigiano-Reggiano Cheese"
                             className="w-full h-full object-cover absolute inset-0"
+                            initial={{ scale: 1.3, filter: 'blur(8px)' }}
+                            whileInView={{ scale: 1, filter: 'blur(0px)' }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                        <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 md:p-12 text-center text-white">
+                        <motion.div
+                            className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 md:p-12 text-center text-white"
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.4, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                        >
                             <h3 className="font-headline text-2xl font-bold mb-4">Aged Parmesan</h3>
                             <p className="text-sm text-white/80 leading-relaxed">
                                 Hand-selected cheeses aged to perfection to provide that characteristic sharp, nutty depth.
                             </p>
-                        </div>
+                        </motion.div>
                     </motion.div>
 
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.95 }}
+                        initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.15 }}
-                        className="relative group md:col-span-1"
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ delay: 0.15, duration: 1, ease: [0.22, 1, 0.36, 1] }}
+                        className="relative group md:col-span-1 overflow-hidden"
                     >
-                        <img
+                        <motion.img
                             alt="Vodka Pasta Dish"
                             className="w-full h-full object-cover min-h-[250px] sm:min-h-[300px] md:min-h-[400px]"
                             src="/assets/vodka-pasta-dish.png"
+                            initial={{ scale: 1.3, filter: 'blur(8px)' }}
+                            whileInView={{ scale: 1, filter: 'blur(0px)' }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            transition={{ delay: 0.15, duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
                         />
                         <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
                             <button className="bg-surface text-primary px-6 py-3 font-semibold uppercase tracking-widest text-xs">
@@ -57,24 +72,34 @@ const IngredientsSection = () => {
                     </motion.div>
 
                     <motion.div
-                        initial={{ opacity: 0, y: 30 }}
+                        initial={{ opacity: 0, y: 60 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.3 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ delay: 0.3, duration: 1, ease: [0.22, 1, 0.36, 1] }}
                         className="relative overflow-hidden min-h-[250px] sm:min-h-[300px] md:min-h-[400px]"
                     >
-                        <img
+                        <motion.img
                             src="/assets/tuscanini-cream.png"
                             alt="Fresh Italian Cream"
                             className="w-full h-full object-cover absolute inset-0"
+                            initial={{ scale: 1.3, filter: 'blur(8px)' }}
+                            whileInView={{ scale: 1, filter: 'blur(0px)' }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            transition={{ delay: 0.3, duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                        <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 md:p-12 text-center text-white">
+                        <motion.div
+                            className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 md:p-12 text-center text-white"
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.7, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                        >
                             <h3 className="font-headline text-2xl font-bold mb-4">Pure Cream</h3>
                             <p className="text-sm text-white/80 leading-relaxed">
                                 Sourced from cows grazed on the lush pastures of Northern Italy for a naturally thick consistency.
                             </p>
-                        </div>
+                        </motion.div>
                     </motion.div>
                 </div>
             </div>
