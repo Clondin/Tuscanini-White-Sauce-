@@ -31,11 +31,17 @@ const BrandStory = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.8, delay: 0.2 }}
+                                className="space-y-4"
                             >
                                 <img
                                     src="/assets/plated_pasta_premium_1769721852433.png"
                                     alt="Plated Pasta"
                                     className="shadow-xl w-full h-80 object-cover"
+                                />
+                                <img
+                                    src="/assets/parmesan-cheese.png"
+                                    alt="Parmigiano-Reggiano Cheese"
+                                    className="shadow-lg w-full h-52 object-cover"
                                 />
                             </motion.div>
                         </div>

@@ -5,21 +5,21 @@ const products = [
         id: 1,
         name: "Premium Alfredo",
         description: "Velvety perfection with 24-month aged Parmigiano Reggiano. The gold standard of white sauces.",
-        image: "/assets/product-alfredo.png",
+        image: "/assets/hero-product-alfredo.png",
         delay: 0
     },
     {
         id: 2,
         name: "Classic Vodka Sauce",
         description: "San Marzano tomatoes meet premium Italian vodka and heavy cream for a perfect pink sauce.",
-        image: "/assets/product-vodka.png",
+        image: "/assets/hero-product-vodka.png",
         delay: 0.2
     },
     {
         id: 3,
         name: "Artisan Mac & Cheese",
         description: "A decadent three-cheese blend crafted for the ultimate comfort food experience.",
-        image: "/assets/product-mac-cheese.png",
+        image: "/assets/hero-product-mac-cheese.png",
         delay: 0.4
     }
 ];
