@@ -27,10 +27,14 @@ const products = [
 const ProductShowcase = () => {
     return (
         <section className="py-24 bg-surface relative overflow-hidden">
-            <div
-                className="absolute inset-0 opacity-30 mix-blend-multiply pointer-events-none"
-                style={{ backgroundImage: "url('/assets/texture_cream_gold_1769721877748.png')", backgroundSize: 'cover' }}
-            />
+            <div className="absolute inset-0 pointer-events-none">
+                <img
+                    src="/assets/italian_ingredients_rustic_1769721864775.png"
+                    alt=""
+                    className="w-full h-full object-cover scale-110"
+                />
+                <div className="absolute inset-0 bg-surface/80 backdrop-blur-[2px]" />
+            </div>
 
             <div className="max-w-7xl mx-auto px-8 relative z-10">
                 <motion.div

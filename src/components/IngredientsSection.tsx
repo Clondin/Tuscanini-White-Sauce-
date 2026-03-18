@@ -21,13 +21,20 @@ const IngredientsSection = () => {
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="bg-surface p-12 flex flex-col items-center text-center"
+                        className="relative overflow-hidden min-h-[400px]"
                     >
-                        <span className="material-symbols-outlined text-4xl text-tuscan-green mb-6">workspace_premium</span>
-                        <h3 className="font-headline text-2xl font-bold mb-4">Aged Parmesan</h3>
-                        <p className="text-sm text-on-surface-variant leading-relaxed">
-                            Hand-selected cheeses aged to perfection to provide that characteristic sharp, nutty depth.
-                        </p>
+                        <img
+                            src="/assets/parmesan-cheese.png"
+                            alt="Parmigiano-Reggiano Cheese"
+                            className="w-full h-full object-cover absolute inset-0"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                        <div className="absolute bottom-0 left-0 right-0 p-12 text-center text-white">
+                            <h3 className="font-headline text-2xl font-bold mb-4">Aged Parmesan</h3>
+                            <p className="text-sm text-white/80 leading-relaxed">
+                                Hand-selected cheeses aged to perfection to provide that characteristic sharp, nutty depth.
+                            </p>
+                        </div>
                     </motion.div>
 
                     <motion.div
@@ -38,9 +45,9 @@ const IngredientsSection = () => {
                         className="relative group md:col-span-1"
                     >
                         <img
-                            alt="Tuscanini Sauce Collection"
+                            alt="Vodka Pasta Dish"
                             className="w-full h-full object-cover min-h-[400px]"
-                            src="/assets/group-sauces.png"
+                            src="/assets/vodka-pasta-dish.png"
                         />
                         <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
                             <button className="bg-surface text-primary px-6 py-3 font-semibold uppercase tracking-widest text-xs">
@@ -54,13 +61,20 @@ const IngredientsSection = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.3 }}
-                        className="bg-tuscan-red p-12 flex flex-col items-center text-center text-white"
+                        className="relative overflow-hidden min-h-[400px]"
                     >
-                        <span className="material-symbols-outlined text-4xl text-white/80 mb-6">eco</span>
-                        <h3 className="font-headline text-2xl font-bold mb-4">Pure Cream</h3>
-                        <p className="text-sm text-white/70 leading-relaxed">
-                            Sourced from cows grazed on the lush pastures of Northern Italy for a naturally thick consistency.
-                        </p>
+                        <img
+                            src="/assets/tuscanini-cream.png"
+                            alt="Fresh Italian Cream"
+                            className="w-full h-full object-cover absolute inset-0"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                        <div className="absolute bottom-0 left-0 right-0 p-12 text-center text-white">
+                            <h3 className="font-headline text-2xl font-bold mb-4">Pure Cream</h3>
+                            <p className="text-sm text-white/80 leading-relaxed">
+                                Sourced from cows grazed on the lush pastures of Northern Italy for a naturally thick consistency.
+                            </p>
+                        </div>
                     </motion.div>
                 </div>
             </div>

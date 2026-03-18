@@ -13,14 +13,10 @@ const Heritage = () => {
                         className="relative group"
                     >
                         <img
-                            alt="Tuscanini Alfredo Sauce Jar"
-                            className="editorial-shadow w-full aspect-[4/5] object-contain bg-white p-8 transition-transform duration-700 group-hover:scale-[1.02]"
-                            src="/assets/hero-product-alfredo.png"
+                            alt="Tuscanini Sauce Collection"
+                            className="editorial-shadow w-full object-contain bg-white p-2 transition-transform duration-700 group-hover:scale-[1.02]"
+                            src="/assets/group-sauces.png"
                         />
-                        <div className="absolute bottom-6 -right-6 bg-surface p-8 editorial-shadow max-w-[200px] border-t-4 border-tuscan-red">
-                            <p className="font-headline text-2xl text-tuscan-red leading-tight italic">Est. 1910</p>
-                            <p className="font-label text-xs uppercase tracking-widest mt-2 text-on-surface-variant">The Gold Standard</p>
-                        </div>
                     </motion.div>
 
                     <motion.div

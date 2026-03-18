@@ -5,47 +5,24 @@ const BrandStory = () => {
         <section className="py-24 bg-surface-container-low relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-8">
                 <div className="flex flex-col md:flex-row items-center gap-16">
-                    <div className="w-full md:w-1/2 relative">
-                        <div className="grid grid-cols-2 gap-4">
-                            <motion.div
-                                initial={{ opacity: 0, x: -50 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.8 }}
-                                className="space-y-4 mt-12"
-                            >
-                                <img
-                                    src="/assets/italian_ingredients_rustic_1769721864775.png"
-                                    alt="Fresh Italian Ingredients"
-                                    className="shadow-lg w-full h-64 object-cover"
-                                />
-                                <div className="p-6 bg-surface editorial-shadow border-l-4 border-tuscan-green">
-                                    <p className="font-headline italic text-on-surface text-lg">
-                                        "Vero Gusto Italiano"
-                                    </p>
-                                </div>
-                            </motion.div>
-
-                            <motion.div
-                                initial={{ opacity: 0, y: 50 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.8, delay: 0.2 }}
-                                className="space-y-4"
-                            >
-                                <img
-                                    src="/assets/plated_pasta_premium_1769721852433.png"
-                                    alt="Plated Pasta"
-                                    className="shadow-xl w-full h-80 object-cover"
-                                />
-                                <img
-                                    src="/assets/parmesan-cheese.png"
-                                    alt="Parmigiano-Reggiano Cheese"
-                                    className="shadow-lg w-full h-52 object-cover"
-                                />
-                            </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="w-full md:w-1/2"
+                    >
+                        <img
+                            src="/assets/mac-and-cheese-dish.png"
+                            alt="Plated Mac and Cheese"
+                            className="shadow-xl w-full h-96 object-cover"
+                        />
+                        <div className="p-6 bg-surface editorial-shadow border-l-4 border-tuscan-green mt-4">
+                            <p className="font-headline italic text-on-surface text-lg">
+                                "Vero Gusto Italiano"
+                            </p>
                         </div>
-                    </div>
+                    </motion.div>
 
                     <motion.div
                         initial={{ opacity: 0, x: 40 }}

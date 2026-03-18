@@ -14,7 +14,7 @@ const Navbar = () => {
             <nav className={`w-full rounded-xl backdrop-blur-xl transition-all duration-500 ${scrolled ? 'bg-white/80 shadow-lg' : 'bg-white/30'}`}>
                 <div className="flex justify-between items-center w-full px-8 py-2 max-w-screen-2xl mx-auto">
                     <img
-                        src="/assets/tuscanini-logo.png"
+                        src="/assets/tuscanini-logo.svg"
                         alt="Tuscanini"
                         className="h-10 w-auto object-contain"
                     />

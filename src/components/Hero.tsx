@@ -9,30 +9,16 @@ const Hero = () => {
                     className="w-full h-full object-cover"
                     src="/assets/hero-alfredo.png"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/50 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-r from-surface/70 via-surface/30 to-transparent" />
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-8 w-full">
                 <div className="max-w-2xl">
-                    <motion.span
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                        className="inline-flex items-center gap-2 bg-surface/70 backdrop-blur-md px-4 py-1.5 mb-6 text-tuscan-green font-label text-xs uppercase tracking-[0.2em]"
-                    >
-                        <span className="flex h-3 rounded-sm overflow-hidden">
-                            <span className="w-1 bg-tuscan-green" />
-                            <span className="w-1 bg-white" />
-                            <span className="w-1 bg-tuscan-red" />
-                        </span>
-                        Authentic Italian Heritage
-                    </motion.span>
-
                     <motion.h1
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
-                        className="font-headline text-6xl md:text-8xl font-black text-primary leading-[1.1] tracking-tighter mb-8"
+                        className="font-headline text-4xl md:text-6xl font-bold text-primary/60 leading-[1.1] tracking-tighter mb-8"
                     >
                         Authentic Alfredo, Directly from Italy.
                     </motion.h1>
