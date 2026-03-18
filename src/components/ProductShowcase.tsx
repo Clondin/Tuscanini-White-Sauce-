@@ -56,28 +56,56 @@ const ProductShowcase = () => {
                     {products.map((product) => (
                         <motion.div
                             key={product.id}
-                            initial={{ opacity: 0, y: 50 }}
+                            initial={{ opacity: 0, y: 120 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: product.delay, duration: 0.6 }}
+                            viewport={{ once: true, amount: 0.15 }}
+                            transition={{
+                                delay: product.delay,
+                                duration: 1,
+                                ease: [0.22, 1, 0.36, 1],
+                            }}
                             className="flex flex-col items-center group"
                         >
                             <div className="relative h-52 sm:h-64 md:h-80 w-full flex items-center justify-center mb-8">
-                                <div className="absolute w-36 h-36 sm:w-44 sm:h-44 md:w-56 md:h-56 rounded-full bg-surface-container-high shadow-lg transition-transform duration-500 group-hover:scale-110" />
+                                <motion.div
+                                    className="absolute w-36 h-36 sm:w-44 sm:h-44 md:w-56 md:h-56 rounded-full bg-surface-container-high shadow-lg"
+                                    initial={{ scale: 0, opacity: 0 }}
+                                    whileInView={{ scale: 1, opacity: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{
+                                        delay: product.delay + 0.3,
+                                        duration: 0.8,
+                                        ease: [0.22, 1, 0.36, 1],
+                                    }}
+                                    whileHover={{ scale: 1.1 }}
+                                />
                                 <motion.img
                                     src={product.image}
                                     alt={product.name}
                                     className="relative h-48 sm:h-60 md:h-72 object-contain drop-shadow-2xl z-10"
-                                    animate={{ y: [0, -12, 0] }}
+                                    initial={{ opacity: 0, y: 80, scale: 0.8, rotate: -3 }}
+                                    whileInView={{ opacity: 1, y: 0, scale: 1, rotate: 0 }}
+                                    viewport={{ once: true, amount: 0.15 }}
                                     transition={{
-                                        duration: 5,
-                                        repeat: Infinity,
-                                        ease: "easeInOut",
-                                        delay: product.delay
+                                        delay: product.delay + 0.15,
+                                        duration: 1.2,
+                                        ease: [0.22, 1, 0.36, 1],
                                     }}
+                                    animate={{ y: [0, -12, 0] }}
+                                    whileHover={{ scale: 1.05, rotate: 2 }}
                                 />
                             </div>
-                            <div className="text-center">
+                            <motion.div
+                                className="text-center"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{
+                                    delay: product.delay + 0.4,
+                                    duration: 0.7,
+                                    ease: [0.22, 1, 0.36, 1],
+                                }}
+                            >
                                 <h3 className="text-2xl font-headline font-bold text-primary mb-2 group-hover:text-tuscan-red transition-colors">
                                     {product.name}
                                 </h3>
@@ -87,7 +115,7 @@ const ProductShowcase = () => {
                                 <button className="text-tuscan-green font-semibold uppercase tracking-wider text-xs border-b-2 border-transparent hover:border-tuscan-green transition-all">
                                     View Details
                                 </button>
-                            </div>
+                            </motion.div>
                         </motion.div>
                     ))}
                 </div>
