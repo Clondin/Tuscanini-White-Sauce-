@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion';
+import RippleButton from './ui/RippleButton';
+import MagneticWrap from './ui/MagneticWrap';
 
 const Newsletter = () => {
     return (
         <section className="py-12 md:py-24 bg-primary text-on-primary overflow-hidden relative">
+            <div className="absolute inset-0 opacity-[0.04] bg-repeat pointer-events-none" style={{ backgroundImage: "url('/assets/texture-linen.png')" }} />
             <div className="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none overflow-hidden hidden sm:block">
                 <span className="font-headline text-[30rem] leading-none select-none">T</span>
             </div>
@@ -34,9 +37,11 @@ const Newsletter = () => {
                         placeholder="Email Address"
                         type="email"
                     />
-                    <button className="bg-tuscan-red text-white px-4 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 font-bold whitespace-nowrap hover:bg-tuscan-red-dark transition-colors">
-                        Subscribe
-                    </button>
+                    <MagneticWrap>
+                        <RippleButton className="bg-tuscan-red text-white px-4 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 font-bold whitespace-nowrap hover:bg-tuscan-red-dark transition-colors">
+                            Subscribe
+                        </RippleButton>
+                    </MagneticWrap>
                 </motion.div>
             </div>
         </section>

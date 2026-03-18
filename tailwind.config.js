@@ -32,11 +32,13 @@ export default {
                 'tuscan-red-dark': '#9B1B25',
                 'tuscan-green': '#009246',
                 'tuscan-green-dark': '#006B33',
+                'tuscan-gold': '#C8952E',
             },
             fontFamily: {
                 headline: ['"Noto Serif"', 'serif'],
                 body: ['"Work Sans"', 'sans-serif'],
                 label: ['"Work Sans"', 'sans-serif'],
+                accent: ['"Caveat"', 'cursive'],
             },
             backgroundImage: {
                 'paper-texture': "url('/assets/texture_cream_gold_1769721877748.png')",

@@ -1,9 +1,18 @@
 import { motion } from 'framer-motion';
+import { wordRevealContainer, wordRevealChild } from '../utils/animations';
+import SkeletonImage from './ui/SkeletonImage';
+
+const headlineWords = [
+    { text: 'The', style: '' },
+    { text: 'Perfect', style: 'font-accent text-tuscan-gold' },
+    { text: 'Pour.', style: '' },
+];
 
 const RecipeSection = () => {
     return (
-        <section id="recipe" className="py-12 sm:py-20 md:py-32 bg-surface overflow-hidden">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+        <section id="recipe" className="py-12 sm:py-20 md:py-32 bg-surface overflow-hidden relative">
+            <div className="absolute inset-0 opacity-[0.04] bg-repeat pointer-events-none" style={{ backgroundImage: "url('/assets/texture-paper.png')" }} />
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 relative">
                 <div className="flex flex-col md:flex-row items-center gap-8 md:gap-20">
                     <motion.div
                         initial={{ opacity: 0, x: -40 }}
@@ -12,7 +21,21 @@ const RecipeSection = () => {
                         transition={{ duration: 0.8 }}
                         className="w-full md:w-5/12 order-2 md:order-1"
                     >
-                        <h2 className="font-headline text-2xl sm:text-3xl md:text-5xl font-black text-primary mb-8 leading-tight italic">The Perfect Pour.</h2>
+                        <motion.h2
+                            variants={wordRevealContainer}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            className="font-headline text-2xl sm:text-3xl md:text-5xl font-black text-primary mb-8 leading-tight italic flex flex-wrap gap-x-[0.3em]"
+                        >
+                            {headlineWords.map((word, i) => (
+                                <span key={i} className="overflow-hidden inline-block">
+                                    <motion.span variants={wordRevealChild} className={`inline-block ${word.style}`}>
+                                        {word.text}
+                                    </motion.span>
+                                </span>
+                            ))}
+                        </motion.h2>
                         <div className="bg-surface-container-high p-5 sm:p-7 md:p-10 relative">
                             <span className="material-symbols-outlined absolute -top-6 -left-6 text-4xl md:text-6xl text-tuscan-red opacity-20">restaurant</span>
                             <h3 className="font-bold text-tuscan-red uppercase tracking-[0.2em] text-sm mb-4">Chef's Secret Tip</h3>
@@ -36,7 +59,7 @@ const RecipeSection = () => {
                         className="w-full md:w-7/12 order-1 md:order-2 relative"
                     >
                         <div className="absolute inset-0 bg-tuscan-green/5 translate-x-4 translate-y-4" />
-                        <img
+                        <SkeletonImage
                             alt="Premium plated fettuccine alfredo"
                             className="relative z-10 w-full h-[250px] sm:h-[400px] md:h-[600px] object-cover shadow-2xl"
                             src="/assets/plated_pasta_premium_1769721852433.png"

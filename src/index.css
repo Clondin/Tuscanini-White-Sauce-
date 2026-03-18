@@ -46,3 +46,20 @@
     0% { background-position: 200% 0; }
     100% { background-position: -200% 0; }
 }
+
+/* Skeleton shimmer placeholder */
+.skeleton-shimmer {
+    background: linear-gradient(
+        90deg,
+        #e5e2dc 25%,
+        #f0eee8 50%,
+        #e5e2dc 75%
+    );
+    background-size: 200% 100%;
+    animation: skeleton-sweep 1.5s ease-in-out infinite;
+}
+
+@keyframes skeleton-sweep {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
