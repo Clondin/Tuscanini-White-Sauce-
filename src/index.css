@@ -21,3 +21,28 @@
 .material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
+
+/* Loading screen logo - invert SVG to white/gold */
+.loading-logo {
+    filter: brightness(0) invert(1);
+}
+
+/* Gold shimmer sweep across the logo */
+.loading-shimmer {
+    background: linear-gradient(
+        105deg,
+        transparent 20%,
+        rgba(253, 208, 141, 0.4) 35%,
+        rgba(253, 208, 141, 0.7) 50%,
+        rgba(253, 208, 141, 0.4) 65%,
+        transparent 80%
+    );
+    background-size: 200% 100%;
+    animation: shimmer-sweep 1.2s ease-in-out;
+    mix-blend-mode: soft-light;
+}
+
+@keyframes shimmer-sweep {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
