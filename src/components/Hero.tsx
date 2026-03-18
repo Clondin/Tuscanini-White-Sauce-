@@ -42,7 +42,7 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.8 }}
-                        className="flex flex-wrap gap-4 justify-center md:justify-start"
+                        className="hidden md:flex flex-wrap gap-4 justify-start"
                     >
                         <button className="bg-tuscan-green text-white px-6 py-3 text-sm sm:px-8 sm:py-3.5 md:px-10 md:py-4 md:text-base font-semibold tracking-wide hover:bg-tuscan-green-dark transition-colors duration-300">
                             Explore the Collection
