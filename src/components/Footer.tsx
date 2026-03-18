@@ -1,8 +1,8 @@
 const Footer = () => {
     return (
-        <footer className="bg-surface-container-low w-full py-16 px-8">
+        <footer className="bg-surface-container-low w-full py-8 px-4 sm:py-12 sm:px-6 md:py-16 md:px-8">
             <div className="max-w-7xl mx-auto">
-                <div className="flex flex-col md:flex-row justify-between items-center gap-12 font-body text-sm tracking-tight mb-12">
+                <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-12 font-body text-sm tracking-tight mb-12">
                     <img
                         src="/assets/tuscanini-logo.svg"
                         alt="Tuscanini"

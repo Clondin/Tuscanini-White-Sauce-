@@ -2,19 +2,19 @@ import { motion } from 'framer-motion';
 
 const Newsletter = () => {
     return (
-        <section className="py-24 bg-primary text-on-primary overflow-hidden relative">
-            <div className="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none overflow-hidden">
+        <section className="py-12 md:py-24 bg-primary text-on-primary overflow-hidden relative">
+            <div className="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none overflow-hidden hidden sm:block">
                 <span className="font-headline text-[30rem] leading-none select-none">T</span>
             </div>
 
-            <div className="max-w-7xl mx-auto px-8 relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
                 <motion.div
                     initial={{ opacity: 0, x: -30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     className="max-w-xl"
                 >
-                    <h2 className="font-headline text-4xl font-bold mb-4 leading-tight">Join the Inner Circle of Italian Taste.</h2>
+                    <h2 className="font-headline text-2xl sm:text-3xl md:text-4xl font-bold mb-4 leading-tight">Join the Inner Circle of Italian Taste.</h2>
                     <p className="text-on-primary/70 text-lg">
                         Receive exclusive recipes, artisan stories, and first access to our limited-release collections.
                     </p>
@@ -34,7 +34,7 @@ const Newsletter = () => {
                         placeholder="Email Address"
                         type="email"
                     />
-                    <button className="bg-tuscan-red text-white px-8 py-4 font-bold whitespace-nowrap hover:bg-tuscan-red-dark transition-colors">
+                    <button className="bg-tuscan-red text-white px-4 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 font-bold whitespace-nowrap hover:bg-tuscan-red-dark transition-colors">
                         Subscribe
                     </button>
                 </motion.div>

@@ -2,9 +2,9 @@ import { motion } from 'framer-motion';
 
 const BrandStory = () => {
     return (
-        <section className="py-24 bg-surface-container-low relative overflow-hidden">
-            <div className="max-w-7xl mx-auto px-8">
-                <div className="flex flex-col md:flex-row items-center gap-16">
+        <section className="py-12 md:py-24 bg-surface-container-low relative overflow-hidden">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+                <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -15,7 +15,7 @@ const BrandStory = () => {
                         <img
                             src="/assets/mac-and-cheese-dish.png"
                             alt="Plated Mac and Cheese"
-                            className="shadow-xl w-full h-96 object-cover"
+                            className="shadow-xl w-full h-56 sm:h-72 md:h-96 object-cover"
                         />
                         <div className="p-6 bg-surface editorial-shadow border-l-4 border-tuscan-green mt-4">
                             <p className="font-headline italic text-on-surface text-lg">
@@ -32,7 +32,7 @@ const BrandStory = () => {
                         className="w-full md:w-1/2"
                     >
                         <span className="text-tuscan-red font-bold tracking-widest uppercase mb-2 block text-xs">Our Story</span>
-                        <h2 className="text-4xl md:text-5xl font-headline font-bold text-primary mb-6">From the Heart of Tuscany</h2>
+                        <h2 className="text-2xl sm:text-3xl md:text-5xl font-headline font-bold text-primary mb-6">From the Heart of Tuscany</h2>
                         <p className="text-on-surface-variant text-lg leading-relaxed mb-6">
                             At Tuscanini, we believe that great food starts with the soil. Our ingredients are sourced directly from small family farms across the Italian countryside. We don't cut corners; we honor traditions that have been passed down for generations.
                         </p>
