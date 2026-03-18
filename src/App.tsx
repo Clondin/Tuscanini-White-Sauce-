@@ -1,15 +1,16 @@
 import { useEffect } from 'react';
+import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Heritage from './components/Heritage';
 import ProductShowcase from './components/ProductShowcase';
+import RecipeSection from './components/RecipeSection';
 import BrandStory from './components/BrandStory';
+import IngredientsSection from './components/IngredientsSection';
+import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
 
 function App() {
-
-    // Simple scroll smoothing or other global effects could go here
     useEffect(() => {
-        // For manual smooth scroll behavior if needed, 
-        // but CSS scroll-behavior: smooth in index.css on html element is often better
         document.documentElement.style.scrollBehavior = 'smooth';
         return () => {
             document.documentElement.style.scrollBehavior = 'auto';
@@ -17,12 +18,19 @@ function App() {
     }, []);
 
     return (
-        <main className="min-h-screen">
-            <Hero />
-            <ProductShowcase />
-            <BrandStory />
+        <>
+            <Navbar />
+            <main className="min-h-screen">
+                <Hero />
+                <Heritage />
+                <ProductShowcase />
+                <RecipeSection />
+                <BrandStory />
+                <IngredientsSection />
+                <Newsletter />
+            </main>
             <Footer />
-        </main>
+        </>
     );
 }
 

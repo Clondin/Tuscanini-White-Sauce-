@@ -1,74 +1,79 @@
-
 import { motion } from 'framer-motion';
 
 const Hero = () => {
     return (
-        <section className="relative h-screen flex items-center justify-center overflow-hidden">
-            {/* Background Image - Parallax Effect */}
-            <div
-                className="absolute inset-0 z-0"
-                style={{
-                    backgroundImage: "url('/assets/banner-vineyard.jpg')",
-                    backgroundPosition: 'center',
-                    backgroundSize: 'cover',
-                    filter: 'brightness(0.6)'
-                }}
-            />
-
-            {/* Content */}
-            <div className="relative z-10 text-center px-4 max-w-5xl mx-auto text-white">
-                <motion.span
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                    className="block text-lg md:text-2xl font-sans tracking-[0.2em] uppercase mb-4 text-tuscan-gold"
-                >
-                    Authentic Italian Craftsmanship
-                </motion.span>
-
-                <motion.h1
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.4 }}
-                    className="text-5xl md:text-8xl font-serif font-bold mb-6 text-shadow-lg leading-tight"
-                >
-                    Taste the Tradition.<br />
-                    Elevate the Everyday.
-                </motion.h1>
-
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.6 }}
-                    className="text-xl md:text-2xl font-light mb-10 max-w-2xl mx-auto text-gray-200"
-                >
-                    Premium sauces, bronze-cut pasta, and the soul of Tuscany in every jar.
-                </motion.p>
-
-                <motion.button
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    transition={{ duration: 0.5, delay: 0.8 }}
-                    className="bg-tuscan-gold text-white px-10 py-4 rounded-full text-lg font-semibold tracking-wide hover:bg-white hover:text-tuscan-gold transition-colors duration-300 shadow-xl"
-                >
-                    Shop Collection
-                </motion.button>
+        <section className="relative min-h-screen flex items-center pt-32 md:pt-36 overflow-hidden">
+            {/* Background - hero-alfredo banner */}
+            <div className="absolute inset-0 z-0">
+                <img
+                    alt="Tuscanini Authentic Italian Alfredo"
+                    className="w-full h-full object-cover"
+                    src="/assets/hero-alfredo.png"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/50 to-transparent" />
             </div>
 
-            {/* Scroll Indicator */}
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1, y: [0, 10, 0] }}
-                transition={{ duration: 2, repeat: Infinity, delay: 1.5 }}
-                className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white/70"
-            >
-                <div className="flex flex-col items-center gap-2">
-                    <span className="text-xs uppercase tracking-widest">Scroll</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 13l5 5 5-5M7 6l5 5 5-5" /></svg>
+            {/* Decorative vertical tricolor stripe on left edge */}
+            <div className="absolute left-0 top-0 bottom-0 z-20 flex">
+                <div className="w-1.5 bg-tuscan-green" />
+                <div className="w-1.5 bg-white/80" />
+                <div className="w-1.5 bg-tuscan-red" />
+            </div>
+
+            {/* Content */}
+            <div className="relative z-10 max-w-7xl mx-auto px-8 w-full">
+                <div className="max-w-2xl">
+                    <motion.span
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        className="inline-flex items-center gap-2 bg-tuscan-green/10 backdrop-blur-md px-4 py-1.5 mb-6 text-tuscan-green font-label text-xs uppercase tracking-[0.2em] border border-tuscan-green/20"
+                    >
+                        {/* Mini Italian flag */}
+                        <span className="flex h-3 rounded-sm overflow-hidden">
+                            <span className="w-1 bg-tuscan-green" />
+                            <span className="w-1 bg-white" />
+                            <span className="w-1 bg-tuscan-red" />
+                        </span>
+                        Authentic Italian Heritage
+                    </motion.span>
+
+                    <motion.h1
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                        className="font-headline text-6xl md:text-8xl font-black leading-[1.1] tracking-tighter mb-8"
+                    >
+                        <span className="text-tuscan-green">Authentic</span> Alfredo,{' '}
+                        <br className="hidden md:block" />
+                        Directly from{' '}
+                        <span className="text-tuscan-red">Italy</span>.
+                    </motion.h1>
+
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.6 }}
+                        className="font-body text-lg md:text-xl text-on-surface-variant max-w-lg mb-10 leading-relaxed"
+                    >
+                        A rich, creamy, and traditional sauce crafted with artisanal expertise and imported directly from the heart of Italy.
+                    </motion.p>
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.8 }}
+                        className="flex flex-wrap gap-4"
+                    >
+                        <button className="bg-tuscan-red text-white px-10 py-4 font-semibold tracking-wide hover:bg-tuscan-red-dark transition-colors duration-300 shadow-xl shadow-tuscan-red/20">
+                            Explore the Collection
+                        </button>
+                        <button className="bg-tuscan-green text-white px-10 py-4 font-semibold hover:bg-tuscan-green-dark transition-colors duration-300 shadow-xl shadow-tuscan-green/20">
+                            Watch the Process
+                        </button>
+                    </motion.div>
                 </div>
-            </motion.div>
+            </div>
         </section>
     );
 };
