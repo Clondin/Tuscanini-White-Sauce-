@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
     return (
-        <section className="relative min-h-screen flex items-center pt-24 sm:pt-28 md:pt-36 overflow-hidden">
+        <section className="relative min-h-screen flex items-start md:items-center pt-24 sm:pt-28 md:pt-36 overflow-hidden">
             <div className="absolute inset-0 z-0">
                 <picture>
                     <source
@@ -15,7 +15,7 @@ const Hero = () => {
                         src="https://github.com/user-attachments/assets/f89e9aec-59d4-4545-90ce-bada816fe438"
                     />
                 </picture>
-                <div className="absolute inset-0 bg-gradient-to-b from-surface/60 via-transparent to-transparent md:bg-gradient-to-r md:from-surface/70 md:via-surface/30 md:to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-b from-surface/90 via-surface/50 to-transparent md:bg-gradient-to-r md:from-surface/70 md:via-surface/30 md:to-transparent" />
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 w-full">
