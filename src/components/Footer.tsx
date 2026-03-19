@@ -8,11 +8,11 @@ const Footer = () => {
                         alt="Tuscanini"
                         className="h-10 w-auto object-contain"
                     />
-                    <div className="flex flex-wrap justify-center gap-8">
-                        <a className="text-on-surface/60 hover:text-tuscan-green transition-colors duration-200" href="#">Privacy Policy</a>
-                        <a className="text-on-surface/60 hover:text-tuscan-green transition-colors duration-200" href="#">Terms of Service</a>
-                        <a className="text-on-surface/60 hover:text-tuscan-green transition-colors duration-200" href="#">Store Locator</a>
-                        <a className="text-on-surface/60 hover:text-tuscan-green transition-colors duration-200" href="#">Contact Us</a>
+                    <div className="flex flex-wrap justify-center gap-4 sm:gap-8">
+                        <a className="text-on-surface/60 hover:text-tuscan-green transition-colors duration-200 py-1" href="#">Privacy Policy</a>
+                        <a className="text-on-surface/60 hover:text-tuscan-green transition-colors duration-200 py-1" href="#">Terms of Service</a>
+                        <a className="text-on-surface/60 hover:text-tuscan-green transition-colors duration-200 py-1" href="#">Store Locator</a>
+                        <a className="text-on-surface/60 hover:text-tuscan-green transition-colors duration-200 py-1" href="#">Contact Us</a>
                     </div>
                 </div>
                 <div className="text-center text-on-surface/40 text-xs border-t border-black/5 pt-8">

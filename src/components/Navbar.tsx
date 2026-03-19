@@ -68,7 +68,7 @@ const Navbar = () => {
 
                     {/* Mobile hamburger / close button */}
                     <button
-                        className="md:hidden absolute right-4 flex items-center justify-center w-10 h-10 rounded-lg transition-colors duration-300 hover:bg-black/5"
+                        className="md:hidden absolute right-4 flex items-center justify-center w-11 h-11 rounded-lg transition-colors duration-300 hover:bg-black/5"
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                         aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
                     >
@@ -88,7 +88,7 @@ const Navbar = () => {
                 <div
                     className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'}`}
                 >
-                    <div className="flex flex-col items-center gap-6 px-4 pb-6 pt-2 font-headline font-light tracking-wide text-sm">
+                    <div className="flex flex-col items-center gap-5 px-4 pb-6 pt-2 font-headline font-light tracking-wide text-base">
                         {navLinks.map((link) => (
                             isHome ? (
                                 <a
@@ -115,7 +115,7 @@ const Navbar = () => {
                             )
                         ))}
                         <button
-                            className="bg-tuscan-red text-white px-8 py-2.5 rounded-lg font-medium tracking-tight hover:bg-tuscan-red-dark transition-all duration-300 active:scale-95 w-full max-w-xs"
+                            className="bg-tuscan-red text-white px-8 py-3 rounded-lg font-medium tracking-tight hover:bg-tuscan-red-dark transition-all duration-300 active:scale-95 w-full max-w-xs"
                             onClick={() => setMobileMenuOpen(false)}
                         >
                             Shop Now

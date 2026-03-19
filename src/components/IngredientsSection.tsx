@@ -53,7 +53,7 @@ const IngredientsSection = () => {
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-1">
                     <motion.div
                         initial={{ opacity: 0, y: 60 }}
                         whileInView={{ opacity: 1, y: 0 }}

@@ -44,7 +44,7 @@ const ProductPage = () => {
     return (
         <main className="min-h-screen bg-surface">
             {/* Hero Section */}
-            <section className="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden">
+            <section className="relative pt-24 pb-12 sm:pt-28 sm:pb-16 md:pt-36 md:pb-24 overflow-hidden">
                 <div className="absolute inset-0 opacity-[0.03]">
                     <img src="/assets/texture-paper.png" alt="" className="w-full h-full object-cover" />
                 </div>
@@ -70,13 +70,13 @@ const ProductPage = () => {
                             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                         >
                             <div
-                                className="absolute w-64 h-64 md:w-80 md:h-80 rounded-full"
+                                className="absolute w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full"
                                 style={{ backgroundColor: `${product.accentHex}10`, boxShadow: `0 0 80px ${product.accentHex}15` }}
                             />
                             <motion.img
                                 src={product.image}
                                 alt={product.name}
-                                className="relative z-10 h-72 md:h-96 object-contain drop-shadow-2xl"
+                                className="relative z-10 h-56 sm:h-72 md:h-96 object-contain drop-shadow-2xl"
                                 animate={{ y: [0, -10, 0] }}
                                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
                             />
@@ -95,14 +95,14 @@ const ProductPage = () => {
                             <motion.h1
                                 variants={fadeUp}
                                 custom={0.2}
-                                className="font-headline text-4xl sm:text-5xl md:text-6xl font-bold text-primary mb-4 leading-tight"
+                                className="font-headline text-3xl sm:text-4xl md:text-6xl font-bold text-primary mb-4 leading-tight"
                             >
                                 {product.name}
                             </motion.h1>
                             <motion.p
                                 variants={fadeUp}
                                 custom={0.3}
-                                className="text-on-surface-variant text-lg leading-relaxed mb-6 max-w-lg"
+                                className="text-on-surface-variant text-base sm:text-lg leading-relaxed mb-6 max-w-lg"
                             >
                                 {product.longDescription}
                             </motion.p>
@@ -111,7 +111,7 @@ const ProductPage = () => {
                                 <span className="text-on-surface-variant text-sm">{product.weight}</span>
                             </motion.div>
                             <motion.div variants={fadeUp} custom={0.5} className="flex flex-wrap gap-4">
-                                <button className="inline-flex items-center gap-2 bg-tuscan-red text-white px-8 py-3 rounded-lg font-medium hover:bg-tuscan-red-dark transition-all duration-300 active:scale-95">
+                                <button className="inline-flex items-center gap-2 bg-tuscan-red text-white px-6 py-3 sm:px-8 rounded-lg font-medium hover:bg-tuscan-red-dark transition-all duration-300 active:scale-95">
                                     <ShoppingCart className="w-4 h-4" />
                                     Add to Cart
                                 </button>
@@ -161,8 +161,8 @@ const ProductPage = () => {
                             ) : (
                                 <span className="absolute top-8 left-8 text-6xl md:text-8xl">{product.heroIngredients[0].emoji}</span>
                             )}
-                            <div className="relative z-10 p-8 md:p-12 bg-gradient-to-t from-black/70 via-black/30 to-transparent">
-                                <h3 className="font-headline text-2xl md:text-3xl font-bold text-white mb-2">{product.heroIngredients[0].name}</h3>
+                            <div className="relative z-10 p-5 sm:p-8 md:p-12 bg-gradient-to-t from-black/70 via-black/30 to-transparent">
+                                <h3 className="font-headline text-xl sm:text-2xl md:text-3xl font-bold text-white mb-2">{product.heroIngredients[0].name}</h3>
                                 <p className="text-white/80 leading-relaxed max-w-md">{product.heroIngredients[0].description}</p>
                             </div>
                         </motion.div>
@@ -290,7 +290,7 @@ const ProductPage = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                            className="relative rounded-2xl overflow-hidden aspect-[4/5] bg-surface-container-high sticky top-32"
+                            className="relative rounded-2xl overflow-hidden aspect-[4/5] bg-surface-container-high lg:sticky lg:top-32"
                         >
                             <img
                                 src={product.recipeImage || product.lifestyleImage || product.image}
@@ -318,7 +318,7 @@ const ProductPage = () => {
                             <motion.h2 variants={fadeUp} custom={0.1} className="font-headline text-3xl md:text-4xl font-bold mb-10">
                                 Crafted with Precision
                             </motion.h2>
-                            <div className="grid grid-cols-2 gap-6">
+                            <div className="grid grid-cols-2 gap-3 sm:gap-6">
                                 {product.productionStats.map((stat, i) => (
                                     <motion.div
                                         key={stat.label}
@@ -327,9 +327,9 @@ const ProductPage = () => {
                                         viewport={{ once: true }}
                                         variants={fadeUp}
                                         custom={0.2 + i * 0.1}
-                                        className="border border-white/10 rounded-xl p-5"
+                                        className="border border-white/10 rounded-xl p-3 sm:p-5"
                                     >
-                                        <span className="font-headline text-2xl md:text-3xl font-bold block mb-1">{stat.value}</span>
+                                        <span className="font-headline text-xl sm:text-2xl md:text-3xl font-bold block mb-1">{stat.value}</span>
                                         <span className="text-white/60 text-sm">{stat.label}</span>
                                     </motion.div>
                                 ))}

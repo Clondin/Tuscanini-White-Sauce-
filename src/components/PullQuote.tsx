@@ -10,7 +10,7 @@ const PullQuote = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
                 >
-                    <span className="font-headline text-6xl md:text-8xl text-tuscan-gold/30 leading-none select-none block">&ldquo;</span>
+                    <span className="font-headline text-5xl sm:text-6xl md:text-8xl text-tuscan-gold/30 leading-none select-none block">&ldquo;</span>
                     <blockquote className="font-headline italic text-2xl sm:text-3xl md:text-4xl text-primary leading-snug -mt-6 md:-mt-10 mb-6">
                         The secret is never the recipe — it is always the ingredients.
                     </blockquote>

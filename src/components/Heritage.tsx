@@ -64,12 +64,12 @@ const Heritage = () => {
                             <div className="w-1/3 bg-white border-y border-gray-200" />
                             <div className="w-1/3 bg-tuscan-red" />
                         </div>
-                        <p className="text-lg leading-relaxed text-on-surface-variant">
+                        <p className="text-base sm:text-lg leading-relaxed text-on-surface-variant">
                             Every jar of Tuscanini Alfredo is a testament to generations of culinary excellence. We believe that true luxury lies in simplicity. Our sauce isn't just made; it's curated using time-honored techniques passed down through Italian families.
                         </p>
 
                         {/* Animated stat counters */}
-                        <div ref={statsRef} className="flex gap-8 py-2">
+                        <div ref={statsRef} className="flex gap-6 sm:gap-8 py-2">
                             <div>
                                 <span className="font-headline text-3xl md:text-4xl font-bold text-tuscan-gold">
                                     {statsInView ? yearCount : 0}

@@ -94,7 +94,7 @@ const ProductCard = ({ product, isFlipped, onFlip }: ProductCardProps) => {
         >
             {/* Flip card container */}
             <div
-                className="relative h-52 sm:h-64 md:h-80 w-full mb-8 cursor-pointer"
+                className="relative h-64 sm:h-72 md:h-80 w-full mb-8 cursor-pointer"
                 style={{ perspective: '1000px' }}
                 onClick={onFlip}
             >
@@ -165,7 +165,7 @@ const ProductCard = ({ product, isFlipped, onFlip }: ProductCardProps) => {
 
                     {/* Back face */}
                     <div
-                        className="absolute inset-0 flex items-center justify-center rounded-2xl p-6"
+                        className="absolute inset-0 flex items-center justify-center rounded-2xl p-4 sm:p-6"
                         style={{
                             backfaceVisibility: 'hidden',
                             transform: 'rotateY(180deg)',
@@ -174,10 +174,10 @@ const ProductCard = ({ product, isFlipped, onFlip }: ProductCardProps) => {
                         }}
                     >
                         <div className="text-center">
-                            <span className="text-4xl mb-4 block">{product.ingredients.join(' ')}</span>
-                            <h4 className="font-headline font-bold text-primary text-lg mb-2">{product.tagline}</h4>
-                            <p className="text-sm text-on-surface-variant leading-relaxed">{product.backText}</p>
-                            <span className="mt-4 inline-block text-xs uppercase tracking-widest text-on-surface-variant/60">Tap to flip back</span>
+                            <span className="text-2xl sm:text-3xl md:text-4xl mb-2 sm:mb-4 block">{product.ingredients.join(' ')}</span>
+                            <h4 className="font-headline font-bold text-primary text-base sm:text-lg mb-1 sm:mb-2">{product.tagline}</h4>
+                            <p className="text-xs sm:text-sm text-on-surface-variant leading-relaxed">{product.backText}</p>
+                            <span className="mt-2 sm:mt-4 inline-block text-xs uppercase tracking-widest text-on-surface-variant/60">Tap to flip back</span>
                         </div>
                     </div>
                 </motion.div>

@@ -22,9 +22,9 @@ const BrandStory = () => {
                             alt="Tuscanini Alfredo with fresh fettuccine"
                             className="shadow-xl w-full h-56 sm:h-72 md:h-96 object-cover"
                         />
-                        <div className="p-6 bg-surface editorial-shadow border-l-4 border-tuscan-green mt-4">
-                            <span className="font-headline text-4xl md:text-5xl text-tuscan-gold/20 leading-none select-none">&ldquo;</span>
-                            <p className="font-accent text-3xl md:text-5xl text-on-surface -mt-4">
+                        <div className="p-4 sm:p-6 bg-surface editorial-shadow border-l-4 border-tuscan-green mt-4">
+                            <span className="font-headline text-3xl sm:text-4xl md:text-5xl text-tuscan-gold/20 leading-none select-none">&ldquo;</span>
+                            <p className="font-accent text-2xl sm:text-3xl md:text-5xl text-on-surface -mt-4">
                                 Vero Gusto Italiano
                             </p>
                         </div>
@@ -53,10 +53,10 @@ const BrandStory = () => {
                                 </span>
                             ))}
                         </motion.h2>
-                        <p className="text-on-surface-variant text-lg leading-relaxed mb-6">
+                        <p className="text-on-surface-variant text-base sm:text-lg leading-relaxed mb-6">
                             At Tuscanini, we believe that great food starts with the soil. Our ingredients are sourced directly from small family farms across the Italian countryside. We don't cut corners; we honor traditions that have been passed down for generations.
                         </p>
-                        <p className="text-on-surface-variant text-lg leading-relaxed mb-8">
+                        <p className="text-on-surface-variant text-base sm:text-lg leading-relaxed mb-8">
                             When you open a jar of Tuscanini, you aren't just making dinner — you're inviting Italy to your table.
                         </p>
                     </motion.div>

@@ -63,7 +63,7 @@ const BeforeAfterSlider = () => {
                         className="absolute top-0 bottom-0 w-0.5 bg-white shadow-lg z-10"
                         style={{ left: `${sliderX}%` }}
                     >
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center">
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-11 h-11 bg-white rounded-full shadow-lg flex items-center justify-center">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="text-primary">
                                 <path d="M7 4L3 10L7 16M13 4L17 10L13 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>

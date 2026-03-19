@@ -10,7 +10,7 @@ const Newsletter = () => {
                 <span className="font-headline text-[30rem] leading-none select-none">T</span>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
                 <motion.div
                     initial={{ opacity: 0, x: -30 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -18,7 +18,7 @@ const Newsletter = () => {
                     className="max-w-xl"
                 >
                     <h2 className="font-headline text-2xl sm:text-3xl md:text-4xl font-bold mb-4 leading-tight">Join the Inner Circle of Italian Taste.</h2>
-                    <p className="text-on-primary/70 text-lg">
+                    <p className="text-on-primary/70 text-base sm:text-lg">
                         Receive exclusive recipes, artisan stories, and first access to our limited-release collections.
                     </p>
                 </motion.div>
@@ -33,7 +33,7 @@ const Newsletter = () => {
                     <label htmlFor="newsletter-email" className="sr-only">Email Address</label>
                     <input
                         id="newsletter-email"
-                        className="bg-white/10 border-none text-on-primary placeholder:text-on-primary/40 focus:ring-2 focus:ring-tuscan-green w-full md:w-80 px-6 py-4 outline-none"
+                        className="bg-white/10 border-none text-on-primary placeholder:text-on-primary/40 focus:ring-2 focus:ring-tuscan-green w-full md:w-80 px-6 py-4 outline-none text-base"
                         placeholder="Email Address"
                         type="email"
                     />

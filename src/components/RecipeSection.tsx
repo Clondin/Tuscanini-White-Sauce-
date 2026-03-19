@@ -37,9 +37,9 @@ const RecipeSection = () => {
                             ))}
                         </motion.h2>
                         <div className="bg-surface-container-high p-5 sm:p-7 md:p-10 relative">
-                            <span className="material-symbols-outlined absolute -top-6 -left-6 text-4xl md:text-6xl text-tuscan-red opacity-20">restaurant</span>
+                            <span className="material-symbols-outlined absolute -top-4 -left-4 sm:-top-6 sm:-left-6 text-3xl sm:text-4xl md:text-6xl text-tuscan-red opacity-20">restaurant</span>
                             <h3 className="font-bold text-tuscan-red uppercase tracking-[0.2em] text-sm mb-4">Chef's Secret Tip</h3>
-                            <p className="text-lg italic text-on-surface-variant leading-relaxed">
+                            <p className="text-base sm:text-lg italic text-on-surface-variant leading-relaxed">
                                 "For the ultimate silky texture, heat the Tuscanini Alfredo sauce gently in a wide pan. Toss with al dente pasta and a splash of pasta water. The starch creates an emulsion that binds our cream and cheese perfectly to every strand."
                             </p>
                             <div className="mt-8 flex items-center gap-4 cursor-pointer group">

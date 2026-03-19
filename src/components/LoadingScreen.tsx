@@ -22,7 +22,7 @@ const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
             >
                 {/* Subtle radial glow behind logo */}
                 <motion.div
-                    className="absolute w-[600px] h-[600px] rounded-full"
+                    className="absolute w-[300px] h-[300px] sm:w-[600px] sm:h-[600px] rounded-full"
                     style={{
                         background: 'radial-gradient(circle, rgba(253,208,141,0.08) 0%, transparent 70%)',
                     }}
@@ -37,15 +37,15 @@ const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
                         key={i}
                         className="absolute w-1 h-1 rounded-full bg-[#fdd08d]"
                         initial={{
-                            x: (Math.random() - 0.5) * 400,
-                            y: (Math.random() - 0.5) * 400,
+                            x: (Math.random() - 0.5) * 200,
+                            y: (Math.random() - 0.5) * 200,
                             opacity: 0,
                             scale: 0,
                         }}
                         animate={{
                             opacity: [0, 0.6, 0],
                             scale: [0, Math.random() * 1.5 + 0.5, 0],
-                            y: [(Math.random() - 0.5) * 400, (Math.random() - 0.5) * 500],
+                            y: [(Math.random() - 0.5) * 200, (Math.random() - 0.5) * 300],
                         }}
                         transition={{
                             duration: Math.random() * 2 + 2,
@@ -94,7 +94,7 @@ const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
 
                     {/* Tagline */}
                     <motion.p
-                        className="mt-8 text-[#fdd08d]/70 font-label text-[10px] sm:text-xs uppercase tracking-[0.35em]"
+                        className="mt-8 text-[#fdd08d]/70 font-label text-xs uppercase tracking-[0.35em]"
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
